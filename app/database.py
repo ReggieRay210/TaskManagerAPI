@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 # 1. Database URL - tells SQLAlchemy where the database file lives.
 SQLALCHEMY_DATABASE_URL = "sqlite:///./tasks.db"
