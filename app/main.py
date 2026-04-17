@@ -23,5 +23,5 @@ app.include_router(tasks.router)
 @app.get("/")
 def root():
     return {
-        "message": "Welcome to the Task Management API. Visit /docs for interactive documentation."
+        "Welcome to the Task Management API. Visit /docs for interactive documentation."
     }
