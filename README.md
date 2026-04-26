@@ -22,6 +22,16 @@ A **production-inspired** REST API built with FastAPI that performs full CRUD (C
 - **Containerized** – Includes a `Dockerfile` for easy deployment and containerization.
 - **Unit Tests** – Example test included with `pytest` to ensure reliability.
 
+## 🔍 The Problem It Solves
+
+As an IT Support Specialist, I noticed that help desk teams often lack a simple, shared task tracker for managing follow‑ups, escalations, or recurring issues. Existing tools were either too heavy (full ITSM suites) or too lightweight (sticky notes). This API was designed as the backend for a lightweight internal task board—something a small support team could use to assign, track, and close tickets without overhead. It’s my first step toward building tools that solve real operational friction.
+
+## 🧠 Key Challenge & Solution
+
+**Challenge:** During development, I struggled with making the SQLAlchemy models and Pydantic schemas stay in sync—especially when adding the `created_at` timestamp. My initial approach duplicated logic and caused validation errors.
+
+**Solution:** I refactored to use SQLAlchemy’s `default=datetime.utcnow` at the model level and ensured the Pydantic schema excluded the field on input but included it on output. This separation of concerns (database vs. validation) is now reflected in the clean module structure you see here.
+
 ## 🛠️ Tech Stack
 
 | Category          | Technology                                                                 |
